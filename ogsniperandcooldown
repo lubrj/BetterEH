@@ -2,8 +2,6 @@ local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
 local localPlayer = Players.LocalPlayer
 
-getgenv().cooldownscript = true
-
 RunService.Heartbeat:Connect(function()
     local character = localPlayer.Character
     if not character then return end
