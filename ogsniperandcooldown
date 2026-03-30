@@ -1,0 +1,15 @@
+local RunService = game:GetService("RunService")
+local Players = game:GetService("Players")
+local localPlayer = Players.LocalPlayer
+
+RunService.Heartbeat:Connect(function()
+    local character = localPlayer.Character
+    if not character then return end
+
+    for _, tool in pairs(character:GetChildren()) do
+        if tool:IsA("Tool") and tool:GetAttribute("Scope") ~= nil then
+            tool:SetAttribute("Scope", false)
+            tool:SetAttribute("ShootDelay", 0.5)
+        end
+    end
+end)
