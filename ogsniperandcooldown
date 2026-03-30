@@ -10,6 +10,7 @@ RunService.Heartbeat:Connect(function()
         if tool:IsA("Tool") and tool:GetAttribute("Scope") ~= nil then
             tool:SetAttribute("Scope", false)
             tool:SetAttribute("ShootDelay", 0.5)
+            print("cooldown script")
         end
     end
 end)
